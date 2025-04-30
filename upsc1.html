@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPSC Coaching Section</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e0f2fe, #f9fafb);
+            color: #1f2937;
+            overflow-x: hidden;
+        }
+
+        /* Header Styles */
+        .header {
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.2), transparent);
+            opacity: 0.5;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            position: relative;
+            animation: fadeInDown 1s ease;
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            font-weight: 400;
+            opacity: 0.9;
+            position: relative;
+            animation: fadeInUp 1s ease;
+        }
+
+        /* Coaching Cards Container */
+        .coaching-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 2rem;
+            gap: 1.5rem;
+        }
+
+        /* Individual Coaching Card */
+        .coaching-card {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            background: linear-gradient(white, white) padding-box,
+                        linear-gradient(45deg, #3b82f6, #1e40af) border-box;
+            animation: fadeIn 1s ease;
+        }
+
+        .coaching-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        .coaching-card h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 0.8rem;
+        }
+
+        .coaching-card p {
+            font-size: 0.95rem;
+            color: #4b5563;
+            line-height: 1.5;
+            margin-bottom: 1.2rem;
+        }
+
+        .explore-btn {
+            display: inline-block;
+            padding: 0.8rem 1.8rem;
+            background: linear-gradient(45deg, #3b82f6, #1e40af);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .explore-btn:hover {
+            background: linear-gradient(45deg, #1e40af, #3b82f6);
+            transform: scale(1.05);
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 3rem 1rem;
+            text-align: center;
+            background: linear-gradient(135deg, #f9fafb, #e0f2fe);
+        }
+
+        .services-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 2rem;
+            animation: fadeIn 1s ease;
+        }
+
+        .services-table {
+            width: 80%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            animation: fadeInUp 1s ease;
+        }
+
+        .services-table th, .services-table td {
+            padding: 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .services-table th {
+            background: linear-gradient(90deg, #1e40af, #3b82f6);
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .services-table td {
+            font-size: 1rem;
+            color: #1f2937;
+        }
+
+        .services-table tr:hover {
+            background: #f1f5f9;
+        }
+
+        .service-icon {
+            font-size: 1.5rem;
+            margin-right: 0.5rem;
+            color: #3b82f6;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .header p {
+                font-size: 1.1rem;
+            }
+
+            .coaching-card {
+                width: 100%;
+                max-width: 350px;
+            }
+
+            .services-table {
+                width: 100%;
+            }
+
+            .services-table th, .services-table td {
+                font-size: 0.9rem;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>UPSC Preparation Hub</h1>
+        <p>Your one-stop destination for top UPSC coaching resources!</p>
+    </div>
+
+    <!-- Coaching Cards Section -->
+    <div class="coaching-container">
+        <!-- Coaching Card 1 -->
+        <div class="coaching-card">
+            <h2>Forum IAS</h2>
+            <p>Premier coaching with expert-led test series and study material.</p>
+            <a href="upsc.html" class="explore-btn">Explore Now</a>
+        </div>
+
+        <!-- Coaching Card 2 -->
+        <div class="coaching-card">
+            <h2>Drishti IAS</h2>
+            <p>Affordable and quality resources for UPSC aspirants.</p>
+            <a href="#" class="explore-btn">Explore Now</a>
+        </div>
+
+        <!-- Coaching Card 3 -->
+        <div class="coaching-card">
+            <h2>Vision IAS</h2>
+            <p>Trusted for in-depth Prelims and Mains test series.</p>
+            <a href="#" class="explore-btn">Explore Now</a>
+        </div>
+
+        <!-- Coaching Card 4 -->
+        <div class="coaching-card">
+            <h2>Vajiram & Ravi</h2>
+            <p>Renowned for mentorship and current affairs guidance.</p>
+              <a href="upsc.html" class="explore-btn">Explore Now</a>
+        </div>
+
+        <!-- Coaching Card 5 -->
+        <div class="coaching-card">
+            <h2>Study IQ</h2>
+            <p>Engaging video lectures and budget-friendly courses.</p>
+            <a href="#" class="explore-btn">Explore Now</a>
+        </div>
+
+        <!-- Coaching Card 6 -->
+        <div class="coaching-card">
+            <h2>Next IAS</h2>
+            <p>Structured programs with personalized support.</p>
+            <a href="#" class="explore-btn">Explore Now</a>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <div class="services-section">
+        <h2>What We Offer to UPSC Aspirants</h2>
+        <table class="services-table">
+            <tr>
+                <th>Service</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><span class="service-icon">📚</span> eBooks</td>
+                <td>Curated digital books covering the entire UPSC syllabus, including NCERTs and current affairs.</td>
+            </tr>
+            <tr>
+                <td><span class="service-icon">📝</span> Prelims Test Series</td>
+                <td>Realistic mock tests with detailed solutions to boost your Prelims preparation.</td>
+            </tr>
+            <tr>
+                <td><span class="service-icon">✍️</span> Mains Test Series</td>
+                <td>Expert-evaluated answer writing practice for Mains with personalized feedback.</td>
+            </tr>
+            <tr>
+                <td><span class="service-icon">📰</span> Current Affairs</td>
+                <td>Daily updates, monthly magazines, and quizzes to master current affairs.</td>
+            </tr>
+            <tr>
+                <td><span class="service-icon">🤝</span> Personalized Guidance</td>
+                <td>Tailored study plans and mentorship to maximize your potential.</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
